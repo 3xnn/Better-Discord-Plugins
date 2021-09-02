@@ -1,0 +1,35 @@
+/**
+ * @name InvertedCord
+ * @description Allows you to customize Discord's native Color Scheme.
+ * @author DevilBro
+ * @version 1.0.0
+ * @authorId 278543574059057154
+ * @invite Jx3TjNS
+ * @donate https://www.paypal.me/MircoWittrien
+ * @patreon https://www.patreon.com/MircoWittrien
+ * @website https://mwittrien.github.io/
+ * @source https://github.com/mwittrien/BetterDiscordAddons/tree/master/Themes/DiscordRecolor/
+*/
+
+@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/DiscordRecolor/DiscordRecolor.css');
+
+:root {
+  --accentcolor: 63,81,181;
+  --accentcolor2: 103,58,183;
+  --linkcolor: 3,169,244;
+  --mentioncolor: 0,188,212;
+  --textbrightest: 3,169,244;
+  --textbrighter: 33,150,243;
+  --textbright: 0,188,212;
+  --textdark: 103,58,183;
+  --textdarker: 103,58,183;
+  --textdarkest: 156,39,176;
+  --font: 0;
+  --backgroundaccent: 33,150,243;
+  --backgroundprimary: 156,39,176;
+  --backgroundsecondary: 3,169,244;
+  --backgroundsecondaryalt: 0,150,136;
+  --backgroundtertiary: 0,150,136;
+  --backgroundfloating: 233,30,99;
+  --settingsicons: 1;
+}
