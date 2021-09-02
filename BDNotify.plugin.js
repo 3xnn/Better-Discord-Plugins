@@ -1,78 +1,28 @@
-//META{"name":"BDNotify"}*//
+/**
+ * @name BDNotify
+ * @author BinnedXena
+ * @description BetterDiscord Notifier
+ * @version 1.0.3
+ * @invite https://discord.gg/RyYECKyWMF
+ * @authorLink https://twitter.com/Autoimi
+ */
 
-class BDNotify {
-    // Constructor
-    constructor() {
-        this.initialized = false;
-    }
-    
-	libraryNames() {
-		"kys",
-		"hi",
-		"bye",
-		"xd",
-		"sorry",
-		"a",
-		"b",
-		"BetterDiscord",
-		"BDNotify"
-	};
-	
-    // Meta
-    getName() { return "BDNotify"; }
-    getShortName() { return "BDNotify"; }
-    getDescription() { return "Notifier for BetterDiscord."; }
-    getVersion() { return "1.0.1"; }
-    getAuthor() { return "BinnedXena"; }
-
-    // Settings  Panel
-    getSettingsPanel() {
-        return "<!--Enter Settings Panel Options, just standard HTML-->";
-    }
-    
-    // Load/Unload
-    load() { }
-
-    unload() { }
-
-    // Events
-
-    onMessage(libraryNames) {
-        // Called when a message is received
-		BdApi.alert("BDNotify",["Message recieved."])
-    };
+module.exports = class ExamplePlugin {
+    load() {
+		
+	} // Optional function. Called when the plugin is loaded in to memory
 
     onSwitch() {
-        // Called when a server or channel is switched
-		BdApi.alert("BDNotify",["Channel was switched."])
-    };
-
-    observer(e) {
-        // raw MutationObserver event for each mutation
-    };
-    
-    // Start/Stop
+        BdApi.alert("BDNotify",["Switched Channel"])	
+    }
+	
     start() {
-        var libraryScript = document.getElementById('zeresLibraryScript');
-	if (!libraryScript) {
-		libraryScript = document.createElement("script");
-		libraryScript.setAttribute("type", "text/javascript");
-		libraryScript.setAttribute("src", "https://rauenzi.github.io/BetterDiscordAddons/Plugins/PluginLibrary.js");
-		libraryScript.setAttribute("id", "zeresLibraryScript");
-		document.head.appendChild(libraryScript);
-	}
-
-	if (typeof window.ZeresLibrary !== "undefined") this.initialize();
-	else libraryScript.addEventListener("load", () => { this.initialize(); });
-    }
-       
+		BdApi.alert("BDNotify",["Started BDNotify 1.0.3"])
+	} // Required function. Called when the plugin is activated (including after reloads)
     stop() {
-        PluginUtilities.showToast(this.getName() + " " + this.getVersion() + " has stopped.");
-    };
+		BdApi.alert("BDNotify",["Stopped BDNotify. Thank you for using!"])
+	} // Required function. Called when the plugin is deactivated
 
-    //  Initialize
-    initialize() {
-        this.initialized = true;
-        PluginUtilities.showToast(this.getName() + " " + this.getVersion() + " has started.");
-    }
+    observer(changes) {} // Optional function. Observer for the `document`. Better documentation than I can provide is found here: <https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver>
+
 }
