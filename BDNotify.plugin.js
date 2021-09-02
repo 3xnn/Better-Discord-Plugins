@@ -1,28 +1,25 @@
-/**
- * @name BDNotify
- * @author BinnedXena
- * @description BetterDiscord Notifier
- * @version 1.0.3
- * @invite https://discord.gg/RyYECKyWMF
- * @authorLink https://twitter.com/Autoimi
- */
+//META{"name":"BDNotify"}*//
 
-module.exports = class ExamplePlugin {
+class BDNotify {
+	
+	getName() {return "BDNotify";}
+    getDescription() {return "Notifier for BetterDiscord, Simple.";}
+    getVersion() {return "1.0.5";}
+    getAuthor() {return "BinnedXena";}
+
     load() {
-		
-	} // Optional function. Called when the plugin is loaded in to memory
-
-    onSwitch() {
-        BdApi.alert("BDNotify",["Switched Channel"])	
+	    BdApi.alert("Loaded Plugin",["BDNotify has loaded. This plugin uses no Library."])	
     }
 	
     start() {
-		BdApi.alert("BDNotify",["Started BDNotify 1.0.3"])
-	} // Required function. Called when the plugin is activated (including after reloads)
+        BdApi.alert("BDNotify",["Launched BDNotify"])
+	}
+
+    onChannel() {
+	    BdApi.alert("BDNotify",["Switched Channel"])	
+    }
     stop() {
-		BdApi.alert("BDNotify",["Stopped BDNotify. Thank you for using!"])
-	} // Required function. Called when the plugin is deactivated
-
-    observer(changes) {} // Optional function. Observer for the `document`. Better documentation than I can provide is found here: <https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver>
-
+        BdApi.alert("BDNotify",["Launched BDNotify"])
+	}
+	
 }
