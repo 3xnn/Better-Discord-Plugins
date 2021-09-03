@@ -1,25 +1,31 @@
-//META{"name":"BDNotify"}*//
+/**
+* @author BinnedXena
+* @name BetterDiscordNotifier
+* @version 1.0.6
+* @description Notifier for BetterDiscord
+* */
 
-class BDNotify {
+module.exports = class BetterDiscordNotifier {
 	
-	getName() {return "BDNotify";}
-    getDescription() {return "Notifier for BetterDiscord, Simple.";}
-    getVersion() {return "1.0.5";}
+	getName() {return "BetterDiscordNotifier";}
+    getDescription() {return "Notifier for BetterDiscord";}
+    getVersion() {return "1.0.6";}
     getAuthor() {return "BinnedXena";}
 
     load() {
-	    BdApi.alert("Loaded Plugin",["BDNotify has loaded. This plugin uses no Library."])	
+	    BdApi.showToast("BDNotify was loaded.")	
     }
 	
     start() {
-        BdApi.alert("BDNotify",["Launched BDNotify"])
+        BdApi.showToast("BDNotify has started.")
 	}
 
     onChannel() {
-	    BdApi.alert("BDNotify",["Switched Channel"])	
+	    BdApi.showToast("Channel was switched.")	
     }
-    stop() {
-        BdApi.alert("BDNotify",["Launched BDNotify"])
+    
+	stop() {
+        BdApi.showToast("BDNotify has been stopped.")
 	}
 	
 }
